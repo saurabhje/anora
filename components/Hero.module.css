@@ -1,0 +1,194 @@
+.hero {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 0;
+  padding: 6rem 2.5rem 5rem;
+  max-width: 1400px;
+  margin: 0 auto;
+  min-height: 85vh;
+  align-items: center;
+}
+
+.left {
+  padding-right: 5rem;
+}
+
+.eyebrow {
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+  font-size: 0.85rem;
+  font-weight: 500;
+  color: var(--black);
+  margin-bottom: 2rem;
+}
+
+.star {
+  font-size: 0.9rem;
+}
+
+.headline {
+  font-family: var(--font-body);
+  font-size: clamp(3.5rem, 6vw, 5.5rem);
+  font-weight: 800;
+  line-height: 1.0;
+  letter-spacing: -0.03em;
+  margin-bottom: 1.5rem;
+  color: var(--black);
+}
+
+.muted {
+  color: var(--light-gray);
+}
+
+.sub {
+  font-size: 1rem;
+  color: var(--gray);
+  font-weight: 400;
+  margin-bottom: 3rem;
+  max-width: 380px;
+}
+
+.ctas {
+  display: flex;
+  gap: 1rem;
+  align-items: center;
+}
+
+.btnPrimary {
+  background: var(--black);
+  color: var(--white);
+  padding: 1rem 2rem;
+  font-size: 0.82rem;
+  font-weight: 700;
+  letter-spacing: 0.08em;
+  transition: opacity 0.2s;
+}
+
+.btnPrimary:hover {
+  opacity: 0.85;
+}
+
+.btnSecondary {
+  background: var(--white);
+  color: var(--black);
+  padding: 1rem 2rem;
+  font-size: 0.82rem;
+  font-weight: 700;
+  letter-spacing: 0.08em;
+  border: 1px solid var(--border);
+  transition: background 0.2s;
+}
+
+.btnSecondary:hover {
+  background: var(--mid-gray);
+}
+
+.right {
+  padding-left: 3rem;
+  border-left: 1px solid var(--border);
+}
+
+.rightText {
+  font-size: 1.05rem;
+  color: var(--black);
+  font-weight: 400;
+  line-height: 1.7;
+  margin-bottom: 2rem;
+}
+
+.divider {
+  border: none;
+  border-top: 1px solid var(--border);
+  margin-bottom: 2rem;
+}
+
+.clientGrid {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 1px;
+  background: var(--border);
+  border: 1px solid var(--border);
+}
+
+.clientCard {
+  background: var(--bg);
+  padding: 1.5rem;
+  display: flex;
+  flex-direction: column;
+  gap: 0.5rem;
+  transition: background 0.2s;
+}
+
+.clientCard:hover {
+  background: var(--white);
+}
+
+.clientNum {
+  font-size: 0.72rem;
+  color: var(--gray);
+  font-weight: 500;
+}
+
+.clientLogo {
+  font-family: var(--font-body);
+  font-size: 1.4rem;
+  font-weight: 800;
+  letter-spacing: -0.02em;
+  color: var(--black);
+}
+
+.clientSector {
+  font-size: 0.78rem;
+  color: var(--gray);
+  font-weight: 400;
+}
+
+@media (max-width: 1024px) {
+  .hero {
+    grid-template-columns: 1fr;
+    gap: 2rem;
+    min-height: 0;
+    padding: 4rem 1.5rem;
+  }
+
+  .left {
+    padding-right: 0;
+  }
+
+  .sub {
+    max-width: 100%;
+  }
+
+  .right {
+    padding-left: 0;
+    border-left: 0;
+    border-top: 1px solid var(--border);
+    padding-top: 2rem;
+  }
+}
+
+@media (max-width: 640px) {
+  .hero {
+    padding: 3rem 1rem;
+  }
+
+  .headline {
+    font-size: clamp(2.2rem, 10vw, 3rem);
+  }
+
+  .ctas {
+    flex-direction: column;
+    align-items: stretch;
+  }
+
+  .btnPrimary,
+  .btnSecondary {
+    width: 100%;
+    text-align: center;
+  }
+
+  .clientGrid {
+    grid-template-columns: 1fr;
+  }
+}

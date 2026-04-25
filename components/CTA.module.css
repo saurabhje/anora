@@ -1,0 +1,200 @@
+.section {
+  border-top: 1px solid var(--border);
+  background: var(--bg);
+}
+
+.inner {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  max-width: 1400px;
+  margin: 0 auto;
+  min-height: 80vh;
+}
+
+.left {
+  padding: 6rem 5rem 6rem 2.5rem;
+  border-right: 1px solid var(--border);
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}
+
+.label {
+  display: block;
+  font-size: 0.72rem;
+  font-weight: 700;
+  letter-spacing: 0.12em;
+  color: var(--gray);
+  margin-bottom: 1.5rem;
+}
+
+.title {
+  font-size: clamp(2.8rem, 4.5vw, 4rem);
+  font-weight: 800;
+  line-height: 1.05;
+  letter-spacing: -0.03em;
+  margin-bottom: 1.5rem;
+}
+
+.muted {
+  color: var(--light-gray);
+}
+
+.sub {
+  font-size: 1rem;
+  color: var(--gray);
+  line-height: 1.7;
+  max-width: 400px;
+  margin-bottom: 2.5rem;
+}
+
+.ctas {
+  display: flex;
+  gap: 1rem;
+  flex-wrap: wrap;
+}
+
+.btnPrimary {
+  background: var(--black);
+  color: var(--white);
+  padding: 1rem 1.75rem;
+  font-size: 0.78rem;
+  font-weight: 700;
+  letter-spacing: 0.08em;
+  transition: opacity 0.2s;
+}
+
+.btnPrimary:hover {
+  opacity: 0.85;
+}
+
+.btnSecondary {
+  background: transparent;
+  color: var(--black);
+  padding: 1rem 1.75rem;
+  font-size: 0.78rem;
+  font-weight: 700;
+  letter-spacing: 0.08em;
+  border: 1px solid var(--border);
+  transition: background 0.2s;
+}
+
+.btnSecondary:hover {
+  background: var(--white);
+}
+
+.right {
+  padding: 6rem 2.5rem 6rem 5rem;
+  display: flex;
+  align-items: center;
+}
+
+.formCard {
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  gap: 1.25rem;
+}
+
+.formTitle {
+  font-size: 1rem;
+  font-weight: 800;
+  letter-spacing: -0.01em;
+  margin-bottom: 0.5rem;
+}
+
+.field {
+  display: flex;
+  flex-direction: column;
+  gap: 0.4rem;
+}
+
+.fieldLabel {
+  font-size: 0.72rem;
+  font-weight: 700;
+  letter-spacing: 0.08em;
+  color: var(--gray);
+  text-transform: uppercase;
+}
+
+.input,
+.textarea {
+  background: var(--white);
+  border: 1px solid var(--border);
+  padding: 0.75rem 1rem;
+  font-size: 0.9rem;
+  font-family: var(--font-body);
+  color: var(--black);
+  width: 100%;
+  transition: border-color 0.2s;
+  outline: none;
+  resize: none;
+}
+
+.input:focus,
+.textarea:focus {
+  border-color: var(--black);
+}
+
+.input::placeholder,
+.textarea::placeholder {
+  color: var(--light-gray);
+}
+
+.submit {
+  background: var(--black);
+  color: var(--white);
+  padding: 1rem;
+  font-size: 0.82rem;
+  font-weight: 700;
+  letter-spacing: 0.08em;
+  width: 100%;
+  margin-top: 0.5rem;
+  transition: opacity 0.2s;
+}
+
+.submit:hover {
+  opacity: 0.85;
+}
+
+@media (max-width: 1024px) {
+  .inner {
+    grid-template-columns: 1fr;
+    min-height: 0;
+  }
+
+  .left {
+    padding: 4rem 1.5rem 2rem;
+    border-right: 0;
+    border-bottom: 1px solid var(--border);
+  }
+
+  .right {
+    padding: 2rem 1.5rem 4rem;
+  }
+}
+
+@media (max-width: 640px) {
+  .left {
+    padding: 3rem 1rem 1.5rem;
+  }
+
+  .right {
+    padding: 1.5rem 1rem 3rem;
+  }
+
+  .title {
+    font-size: clamp(2.2rem, 11vw, 2.8rem);
+  }
+
+  .ctas {
+    flex-direction: column;
+    align-items: stretch;
+  }
+
+  .btnPrimary,
+  .btnSecondary {
+    width: 100%;
+    text-align: center;
+  }
+}
